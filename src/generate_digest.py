@@ -4,6 +4,9 @@ from pathlib import Path
 
 INPUT_FILE = Path("data/ranked_papers.csv")
 OUTPUT_DIR = Path("output")
+NOTES_OUTPUT_DIR = Path(
+r"C:\Users\danmar\OneDrive - UKCEH\UKCEH_Notes\Literature Digest"
+)
 
 NUMBER_OF_PAPERS = 10
 DAYS_IN_DIGEST = 7
@@ -230,31 +233,47 @@ def build_digest(papers):
 
     return "\n".join(sections)
 
-def get_output_file():
+def get_output_filename():
     today = date.today()
 
-    filename = (
+    return (
         f"research_digest_"
         f"{today.isoformat()}.md"
     )
 
-    return OUTPUT_DIR / filename
-
 def save_digest(content):
-    OUTPUT_DIR.mkdir(
-        exist_ok=True
-    )
+    """
+    Save the research digest to both the project output
+    directory and the UKCEH Notes Literature Digest folder.
+    """
 
-    output_file = get_output_file()
+    filename = get_output_filename()
 
-    with open(
-        output_file,
-        "w",
-        encoding="utf-8",
-    ) as file:
-        file.write(content)
+    output_directories = [
+        OUTPUT_DIR,
+        NOTES_OUTPUT_DIR,
+    ]
 
-    return output_file
+    saved_files = []
+
+    for directory in output_directories:
+        directory.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        output_file = directory / filename
+
+        with open(
+            output_file,
+            "w",
+            encoding="utf-8",
+        ) as file:
+            file.write(content)
+
+        saved_files.append(output_file)
+
+    return saved_files
 
 def main():
     papers = load_ranked_papers()
@@ -272,14 +291,15 @@ def main():
 
     digest = build_digest(papers)
 
-    output_file = save_digest(
+    saved_files = save_digest(
         digest
     )
 
-    print(
-        f"Saved research digest to "
-        f"{output_file}"
-    )
+    print()
+    print("Research digest saved to:")
+
+    for saved_file in saved_files:
+        print(f"  {saved_file}")
 
 if __name__ == "__main__":
     main()
