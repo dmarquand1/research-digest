@@ -1,0 +1,101 @@
+research_themes:
+
+  high_priority:
+    - automated biodiversity monitoring
+    - automated insect monitoring
+    - automated moth monitoring
+    - computer vision for biodiversity
+    - artificial intelligence for biodiversity monitoring
+    - machine learning for ecological monitoring
+
+  medium_priority:
+    - biodiversity monitoring technology
+    - ecological monitoring
+    - remote biodiversity monitoring
+    - conservation technology
+    - sensor-based ecological monitoring
+
+
+taxa:
+
+  high_priority:
+    - moths
+    - Lepidoptera
+    - insects
+
+  medium_priority:
+    - arthropods
+    - butterflies
+    - terrestrial invertebrates
+
+
+methods:
+
+  high_priority:
+    - computer vision
+    - image classification
+    - object detection
+    - species classification
+    - deep learning
+    - automated monitoring
+
+  medium_priority:
+    - machine learning
+    - neural networks
+    - image embeddings
+    - representation learning
+    - foundation models
+    - vision transformers
+    - convolutional neural networks
+    - transfer learning
+    - self-supervised learning
+
+
+ecological_topics:
+
+  high_priority:
+    - biodiversity change
+    - insect population trends
+    - insect abundance
+    - insect diversity
+    - biodiversity indicators
+
+  medium_priority:
+    - species richness
+    - community composition
+    - phenology
+    - occupancy
+    - abundance estimation
+    - population monitoring
+    - insect declines
+
+
+adjacent_interests:
+  - bioacoustics
+  - acoustic monitoring
+  - camera traps
+  - environmental DNA
+  - citizen science
+  - ecological sensor networks
+  - remote sensing
+  - edge computing for ecological monitoring
+  - AI-assisted ecological monitoring
+
+
+watch_terms:
+  - automated monitoring of insects
+  - automated monitoring of moths
+  - insect camera trap
+  - moth camera trap
+  - insect imaging
+  - nocturnal insect monitoring
+  - light trap computer vision
+  - fine-grained insect classification
+
+
+exclude_topics:
+  - medical imaging
+  - human activity recognition
+  - autonomous driving
+  - industrial inspection
+  - facial recognition
