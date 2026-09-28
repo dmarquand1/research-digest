@@ -1,11 +1,11 @@
 import csv
 import os
 import re
+from datetime import date, timedelta
 
 import requests
 import yaml
 from dotenv import load_dotenv
-
 
 # ---------------------------------------------------------
 # Configuration
@@ -15,7 +15,13 @@ OPENALEX_URL = "https://api.openalex.org/works"
 
 INPUT_CONFIG = "config/interests.yaml"
 OUTPUT_FILE = "data/candidate_papers.csv"
+DAYS_TO_SEARCH = 7
 
+end_date = date.today()
+
+start_date = end_date - timedelta(
+    days=DAYS_TO_SEARCH
+)
 
 # ---------------------------------------------------------
 # Load API key
@@ -50,13 +56,15 @@ def search_openalex(search_term):
     """
     Search OpenAlex for papers matching a search term.
 
-    Currently retrieves up to 10 results published from
-    1 January 2026 onwards.
+    Currently retrieves papers published between {start_date} and {end_date}.
     """
-
+    date_filter = (
+    f"from_publication_date:{start_date},"
+    f"to_publication_date:{end_date}"
+    )
     params = {
         "search": search_term,
-        "filter": "from_publication_date:2026-01-01",
+        "filter": date_filter,
         "per_page": 10,
         "api_key": api_key,
     }
@@ -247,6 +255,12 @@ def deduplicate_by_title(papers):
 # ---------------------------------------------------------
 # Collect papers
 # ---------------------------------------------------------
+print(
+    f"Searching publications from "
+    f"{start_date} to {end_date}"
+)
+
+print()
 
 unique_papers = {}
 

@@ -22,6 +22,10 @@ taxa:
     - moths
     - Lepidoptera
     - insects
+    - birds
+    - avian
+    - bats
+    - chiroptera
 
   medium_priority:
     - arthropods
@@ -38,6 +42,7 @@ methods:
     - species classification
     - deep learning
     - automated monitoring
+    - acoustic monitoring
 
   medium_priority:
     - machine learning
@@ -49,6 +54,7 @@ methods:
     - convolutional neural networks
     - transfer learning
     - self-supervised learning
+    - edge computing
 
 
 ecological_topics:
@@ -91,6 +97,9 @@ watch_terms:
   - nocturnal insect monitoring
   - light trap computer vision
   - fine-grained insect classification
+  - acoutic monitoring of birds
+  - acoustic monitoring of bats
+  - automated biodiversity monitoring
 
 
 exclude_topics:
