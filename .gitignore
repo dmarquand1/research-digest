@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Generated data
+data/*
+output/*
+
+# Keep empty directories in Git
+!data/.gitkeep
+!output/.gitkeep
+
+# Environment variables / secrets
+.env
