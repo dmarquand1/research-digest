@@ -8,8 +8,8 @@ NOTES_OUTPUT_DIR = Path(
 r"C:\Users\danmar\OneDrive - UKCEH\UKCEH_Notes\Literature Digest"
 )
 
-NUMBER_OF_PAPERS = 10
-DAYS_IN_DIGEST = 7
+NUMBER_OF_PAPERS = 25
+DAYS_IN_DIGEST = 14
 
 def load_ranked_papers():
     with open(
