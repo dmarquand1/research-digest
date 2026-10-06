@@ -226,6 +226,8 @@ python -m pip install -r requirements.txt
 
 ## Configure the OpenAlex API key
 
+Make an account with OpenAlex and create an API key: [openalex.org/settings/api-key](https://openalex.org/settings/api-key)
+
 Create a file in the project root called:
 
 ```text
