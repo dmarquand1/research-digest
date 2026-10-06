@@ -4,9 +4,11 @@ from pathlib import Path
 
 INPUT_FILE = Path("data/ranked_papers.csv")
 OUTPUT_DIR = Path("output")
-NOTES_OUTPUT_DIR = Path(
-r"C:\Users\danmar\OneDrive - UKCEH\UKCEH_Notes\Literature Digest"
-)
+
+# Edit below to save it to your own OneDrive if you want
+# NOTES_OUTPUT_DIR = Path(
+# r"C:\Users\danmar\OneDrive - UKCEH\UKCEH_Notes\Literature Digest"
+# )
 
 NUMBER_OF_PAPERS = 25
 DAYS_IN_DIGEST = 14
