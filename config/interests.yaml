@@ -40,7 +40,6 @@ methods:
     - image classification
     - object detection
     - species classification
-    - deep learning
     - automated monitoring
     - acoustic monitoring
 
@@ -55,6 +54,9 @@ methods:
     - transfer learning
     - self-supervised learning
     - edge computing
+    - deep learning
+
+
 
 
 ecological_topics:

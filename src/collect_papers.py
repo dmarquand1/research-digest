@@ -15,7 +15,7 @@ OPENALEX_URL = "https://api.openalex.org/works"
 
 INPUT_CONFIG = "config/interests.yaml"
 OUTPUT_FILE = "data/candidate_papers.csv"
-DAYS_TO_SEARCH = 7
+DAYS_TO_SEARCH = 14
 
 end_date = date.today()
 
